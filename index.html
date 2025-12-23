@@ -17,11 +17,12 @@
             </div>
             <div class="h-right">
                 <input class="searchbar" type="search" placeholder="Search">
+                <div class="search-suggestions"></div>
                 <ul>
-                    <li>About Me</li>
-                    <li>Projects</li>
-                    <li>Hobbies / Interest</li>
-                    <li>Socials / Contacts</li>
+                    <li data-target="about">About Me</li>
+                    <li data-target="projects">Projects</li>
+                    <li data-target="hobbies">Hobbies / Interest</li>
+                    <li data-target="socials">Socials / Contacts</li>
                 </ul>
             </div>
         </div>
@@ -68,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="aboutme">
+            <div id="about" class="aboutme">
                 <div class="img-me d-glow"></div>
                 <div class="am">
                     <span class="am-title t-glow2">About Me</span>
@@ -81,7 +82,7 @@
                     </p>
                 </div>
             </div>
-            <div class="projects">
+            <div id="projects" class="projects">
                 <span class="projects-title t-glow1">PROJECTS</span>
                 <div class="lines-circles2">
                     <div class="line20 d-glow"></div>
@@ -128,7 +129,7 @@
             </div>
             <div class="second-p"></div>
             <div class="third-p"></div>
-            <div class="hobbies-interest">
+            <div id="hobbies" class="hobbies-interest">
                 <span class="hi-title t-glow1">HOBBIES / INTEREST</span>
                 <div class="hi-maincon">
                     <div class="hi-con">
@@ -150,7 +151,7 @@
                     
                 </div>
             </div>
-            <div class="socials-contacts">
+            <div id="socials" class="socials-contacts">
                 <span class="sc-title t-glow1">SOCIALS / CONTACTS</span>
                 <div class="sc-maincon">
                     <div class="dim-effect circle-info-1"></div>
