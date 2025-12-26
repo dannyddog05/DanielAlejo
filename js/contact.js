@@ -115,7 +115,7 @@ function sendEmail() {
 
         // Show success message and keep button disabled until message disappears
         button.textContent = "Sent!";
-        showMessage(successMsg).then(() => {
+        showMessage(successMsg, "✅ Thank you! Your message has been sent successfully.").then(() => {
             resetButton(button);
         });
 
