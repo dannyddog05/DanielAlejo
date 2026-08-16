@@ -22,6 +22,11 @@ body {
 .d-glow {
     box-shadow: 0 0 10px #27EDF0, 0 0 30px #27EDF0, 0 0 30px #27EDF0;
 }
+.underline{
+    text-decoration: underline;
+    text-underline-offset: 12px;
+    text-decoration-thickness: 3px;
+}
 
 .container {
     display: grid;
@@ -122,7 +127,7 @@ body {
                     width: 523px;
 
                     .name {
-                        font-size: 90px;
+                        font-size: 85px;
                         font-weight: bold;
                     }
                     .line {
@@ -448,7 +453,7 @@ body {
             padding: 10rem 5rem;
 
             .projects-title {
-                font-size: 120px;
+                font-size: 115px;
                 font-weight: bold;
             }
 
@@ -654,6 +659,124 @@ body {
             .imgs-p1 {
                 position: relative;
                 width: 433px;
+                height: 500px;
+                padding: 10px;
+                margin: 0 10px;
+            }
+        }
+        .second-p {
+            display: flex;
+            position: relative;
+            flex: 1;
+            padding: 75px;
+            justify-content: center;
+            align-items: center;
+            
+
+            .p2-desc {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 550px;
+
+                .p2-up {
+                    text-align: left;
+
+                    .con-p2-name {
+                        width: fit-content;
+
+                        .p2-name {
+                            font-size: 50px;
+                            font-weight: bold;
+                            color: #27EDF0;
+                        }
+                        .p2-line {
+                            margin: 0;
+                            height: 3px;
+                            background-color: #27EDF0;
+                        }
+                        }
+                        .p2-position {
+                            font-size: 25px;
+                            font-weight: bold;
+                            margin-top: 50px;
+                            color: #27EDF0
+                        }
+                }
+                .space {
+                    width: fit-content;
+                    height: 30px;
+                }
+                .p2-low {
+                    .p2-overview {
+                        font-size: 20px;
+                        text-align: left;
+                        color: #27EDF0;
+                    }
+                }
+            }
+            .imgs-p2 {
+                position: relative;
+                width: 625px;
+                height: 500px;
+                padding: 10px;
+                margin: 0 10px;
+            }
+        }
+        .third-p {
+            display: flex;
+            position: relative;
+            flex: 1;
+            padding: 75px;
+            justify-content: center;
+            align-items: center;
+            
+
+            .p3-desc {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 570px;
+
+                .p3-up {
+                    text-align: right;
+
+                    .con-p3-name {
+                        width: fit-content;
+
+                        .p3-name {
+                            font-size: 50px;
+                            font-weight: bold;
+                            color: #27EDF0;
+                        }
+                        .p3-line {
+                            margin: 0;
+                            height: 3px;
+                            background-color: #27EDF0;
+                        }
+                        }
+                        .p3-position {
+                            font-size: 25px;
+                            font-weight: bold;
+                            margin-top: 50px;
+                            color: #27EDF0
+                        }
+                }
+                .space {
+                    width: fit-content;
+                    height: 30px;
+                }
+                .p3-low {
+                    .p3-overview {
+                        font-size: 20px;
+                        text-align: right;
+                        color: #27EDF0;
+                    }
+                }
+            }
+            .imgs-p3 {
+                position: relative;
+                width: 625px;
                 height: 500px;
                 padding: 10px;
                 margin: 0 10px;
