@@ -24,7 +24,7 @@ body {
 }
 
 .d-glow {
-    box-shadow: 0 0 10px #27EDF0, 0 0 30px #27EDF0, 0 0 30px #27EDF0;
+    box-shadow: 0 0 5px #27EDF0, 0 0 15px #27EDF0, 0 0 20px #27EDF0;
 }
 .underline{
     text-decoration: underline;
@@ -134,7 +134,7 @@ body {
                     width: 493px;
 
                     .name {
-                        font-size: 85px;
+                        font-size: 75px;
                         font-weight: bold;
                     }
                     .line {
@@ -732,7 +732,7 @@ body {
                 width: 600px;
                 height: 400px;
                 padding: 10px;
-                margin: 0 1rem 0 0;
+                margin: 0 2rem 0 0;
                 background-color: #FFFFFF;
             }
         }
@@ -793,7 +793,7 @@ body {
                 width: 600px;
                 height: 400px;
                 padding: 10px;
-                margin: 0 0 0 1rem;
+                margin: 0 0 0 2rem;
             }
         }
         .hobbies-interest {
