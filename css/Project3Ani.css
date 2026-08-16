@@ -1,0 +1,141 @@
+.imgs-p3 {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 10px;
+    padding: 0;
+    
+}
+
+
+/* ================================
+   P3 SLIDES
+   ================================ */
+
+.imgs-p3 img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+
+    /*
+     * All images occupy exactly
+     * the same position.
+     */
+    opacity: 0;
+
+    /*
+     * 16 images × 3 seconds
+     */
+    animation: p3FadeShow 48s infinite;
+
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* ================================
+   SLIDE TIMING
+   ================================ */
+
+.imgs-p3 img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.imgs-p3 img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.imgs-p3 img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.imgs-p3 img:nth-child(4) {
+    animation-delay: 9s;
+}
+
+.imgs-p3 img:nth-child(5) {
+    animation-delay: 12s;
+}
+
+.imgs-p3 img:nth-child(6) {
+    animation-delay: 15s;
+}
+
+.imgs-p3 img:nth-child(7) {
+    animation-delay: 18s;
+}
+
+.imgs-p3 img:nth-child(8) {
+    animation-delay: 21s;
+}
+
+.imgs-p3 img:nth-child(9) {
+    animation-delay: 24s;
+}
+
+.imgs-p3 img:nth-child(10) {
+    animation-delay: 27s;
+}
+
+.imgs-p3 img:nth-child(11) {
+    animation-delay: 30s;
+}
+
+.imgs-p3 img:nth-child(12) {
+    animation-delay: 33s;
+}
+
+.imgs-p3 img:nth-child(13) {
+    animation-delay: 36s;
+}
+
+.imgs-p3 img:nth-child(14) {
+    animation-delay: 39s;
+}
+
+.imgs-p3 img:nth-child(15) {
+    animation-delay: 42s;
+}
+
+.imgs-p3 img:nth-child(16) {
+    animation-delay: 45s;
+}
+
+
+/* ================================
+   FADE-IN / FADE-OUT
+   ================================ */
+
+@keyframes p3FadeShow {
+
+    /* Hidden */
+    0% {
+        opacity: 0;
+    }
+
+    /* Fade in */
+    2% {
+        opacity: 1;
+    }
+
+    /* Stay visible */
+    5% {
+        opacity: 1;
+    }
+
+    /* Fade out */
+    7% {
+        opacity: 0;
+    }
+
+    /* Stay hidden */
+    100% {
+        opacity: 0;
+    }
+}

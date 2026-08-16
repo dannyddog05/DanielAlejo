@@ -1,0 +1,2284 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Calibri, Arial, sans-serif;
+    color: white;
+    background-color: #101010;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   UNIVERSAL CLASSES
+   ========================================================= */
+
+.t-glow1 {
+    text-shadow:
+        0 0 10px #27EDF0,
+        0 0 20px #27EDF0,
+        0 0 25px #27EDF0;
+}
+
+.t-glow2 {
+    text-shadow:
+        0 0 10px #27EDF0,
+        0 0 30px #27EDF0;
+}
+
+.d-glow {
+    box-shadow:
+        0 0 10px #27EDF0,
+        0 0 30px #27EDF0,
+        0 0 30px #27EDF0;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 12px;
+    text-decoration-thickness: 3px;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    grid-area: header;
+
+    min-height: 85px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    background-color: #010101;
+
+    padding: 0.5rem clamp(1rem, 2.5vw, 2rem);
+
+    position: relative;
+    z-index: 1000;
+}
+
+
+/* ---------- Header Left ---------- */
+
+.h-left {
+    height: auto;
+    width: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    gap: 8px;
+}
+
+.img-hlogo {
+    aspect-ratio: 1 / 1;
+
+    height: clamp(50px, 5vw, 70px);
+
+    background-image: url(Elements/D-Logo-Figma.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    flex-shrink: 0;
+}
+
+.t-htitle {
+    font-size: clamp(20px, 2vw, 30px);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* ---------- Header Right ---------- */
+
+.h-right {
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+
+/* ---------- Search ---------- */
+
+.searchbar {
+    height: 40px;
+
+    width: clamp(140px, 16vw, 230px);
+
+    border-radius: 50px;
+
+    background-color: #202020;
+
+    padding: 0 1rem;
+
+    color: #FFFFFF;
+
+    border: none;
+
+    outline: none;
+
+    margin: 0 0.5rem;
+}
+
+.searchbar::placeholder {
+    color: #999;
+}
+
+.searchbar:focus {
+    box-shadow:
+        0 0 5px #27EDF0,
+        0 0 15px rgba(39, 237, 240, 0.4);
+}
+
+
+/* ---------- Navigation ---------- */
+
+.h-right ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: clamp(4px, 0.5vw, 12px);
+
+    list-style: none;
+}
+
+.h-right ul li {
+    margin: 0 0.5rem;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease,
+        text-shadow 0.2s ease;
+}
+
+.h-right ul li:hover {
+    color: #27EDF0;
+
+    text-shadow:
+        0 0 8px #27EDF0,
+        0 0 15px #27EDF0;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.main {
+    grid-area: main;
+
+    width: 100%;
+
+    background-color: #101010;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO / INTRO
+   ========================================================= */
+
+.intro {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 550px;
+
+    height: auto;
+
+    overflow: hidden;
+}
+
+
+/* ---------- Hero Content ---------- */
+
+.intro-con {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+
+    min-height: 550px;
+
+    height: auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: clamp(20px, 4vw, 70px);
+
+    padding: clamp(40px, 5vw, 75px);
+}
+
+
+/* ---------- Main Logo ---------- */
+
+.img-logo {
+    height: clamp(200px, 22vw, 300px);
+
+    aspect-ratio: 1 / 1;
+
+    flex-shrink: 0;
+
+    background-image: url(Elements/D-Logo-Figma.png);
+
+    background-size: 112%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ---------- Name / Description ---------- */
+
+.name-description {
+    align-content: center;
+
+    width: min(523px, 90vw);
+
+    max-width: 523px;
+
+    min-width: 0;
+}
+
+.name {
+    display: block;
+
+    font-size: clamp(48px, 6vw, 90px);
+
+    line-height: 1;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.name-description > .line {
+    width: 100%;
+
+    height: 5px;
+
+    margin: 15px 0;
+
+    background-color: white;
+}
+
+.position {
+    display: block;
+
+    font-size: clamp(24px, 3vw, 40px);
+
+    line-height: 1.15;
+}
+
+
+/* ---------- Hero Bottom Area ---------- */
+
+.extra {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+.extra span {
+    align-self: flex-end;
+
+    font-size: clamp(12px, 1vw, 16px);
+
+    line-height: 1.3;
+}
+
+
+/* ---------- Hero Button ---------- */
+
+.main-btn {
+    width: 140px;
+
+    min-width: 120px;
+
+    height: 50px;
+
+    background-color: #101010;
+
+    color: #27EDF0;
+
+    font-weight: bold;
+
+    padding: 5px;
+
+    border: 2px solid #27EDF0;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition:
+        0.3s ease-in-out;
+
+    flex-shrink: 0;
+}
+
+.main-btn:hover {
+    background-color: #27EDF0;
+
+    color: black;
+
+    box-shadow:
+        0 0 10px #27EDF0,
+        0 0 30px #27EDF0;
+}
+
+
+/* =========================================================
+   HERO CIRCUIT DECORATIONS
+   ========================================================= */
+
+.lines-circles1 {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.lines-circles1 > div {
+    position: absolute;
+
+    height: 2px;
+
+    background-color: #27EDF0;
+}
+
+
+/* ---------- Left Circuit ---------- */
+
+.line1 {
+    top: 140px;
+    left: 0;
+    width: 99px;
+}
+
+.line2 {
+    top: 99px;
+    left: 83px;
+    width: 130px;
+    transform: rotate(-40deg);
+}
+
+.line3 {
+    top: 57px;
+    left: 197px;
+    width: 220px;
+}
+
+.line4 {
+    top: 220px;
+    left: 0;
+    width: 99px;
+}
+
+.line5 {
+    top: 163px;
+    left: 77px;
+    width: 180px;
+    transform: rotate(-40deg);
+}
+
+.line6 {
+    top: 105px;
+    left: 235px;
+    width: 313px;
+}
+
+.line7 {
+    top: 275px;
+    left: 0;
+    width: 99px;
+}
+
+.line8 {
+    top: 355px;
+    left: 0;
+    width: 99px;
+}
+
+.line9 {
+    top: 412px;
+    left: 78px;
+    width: 180px;
+    transform: rotate(40deg);
+}
+
+.line10 {
+    top: 470px;
+    left: 236px;
+    width: 260px;
+}
+
+
+/* ---------- Right Circuit ---------- */
+
+.line11 {
+    top: 150px;
+    right: 0;
+    width: 100px;
+}
+
+.line12 {
+    top: 112px;
+    right: 85px;
+    width: 120px;
+    transform: rotate(40deg);
+}
+
+.line13 {
+    top: 74px;
+    right: 190px;
+    width: 260px;
+}
+
+.line14 {
+    top: 385px;
+    right: 0;
+    width: 130px;
+}
+
+.line15 {
+    top: 415px;
+    right: 118px;
+    width: 95px;
+    transform: rotate(-40deg);
+}
+
+.line16 {
+    top: 445px;
+    right: 201px;
+    width: 205px;
+}
+
+.line17 {
+    top: 425px;
+    right: 0;
+    width: 100px;
+}
+
+.line18 {
+    top: 455px;
+    right: 88px;
+    width: 95px;
+    transform: rotate(-40deg);
+}
+
+.line19 {
+    top: 485px;
+    right: 170px;
+    width: 255px;
+}
+
+
+/* ---------- Circuit Circles ---------- */
+
+.circle1,
+.circle2,
+.circle3,
+.circle4,
+.circle5,
+.circle6,
+.circle7 {
+    width: 10px !important;
+    height: 10px !important;
+
+    border-radius: 50%;
+
+    background-color: #27EDF0 !important;
+}
+
+
+/* Left */
+
+.circle1 {
+    top: 53px;
+    left: 416px;
+}
+
+.circle2 {
+    top: 101px;
+    left: 545px;
+}
+
+.circle3 {
+    top: 271px;
+    left: 99px;
+}
+
+.circle4 {
+    top: 466px;
+    left: 490px;
+}
+
+
+/* Right */
+
+.circle5 {
+    top: 70px;
+    right: 450px;
+}
+
+.circle6 {
+    top: 441px;
+    right: 400px;
+}
+
+.circle7 {
+    top: 481px;
+    right: 420px;
+}
+
+
+/* =========================================================
+   ABOUT ME
+   ========================================================= */
+
+.aboutme {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: clamp(20px, 4vw, 60px);
+
+    padding: clamp(6rem, 10vw, 10rem) 5%;
+}
+
+
+/* ---------- About Image ---------- */
+
+.img-me {
+    width: min(300px, 80vw);
+
+    height: auto;
+
+    aspect-ratio: 3 / 4;
+
+    background-image: url(Elements/MePic.png);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 25px;
+
+    flex-shrink: 0;
+}
+
+
+/* ---------- About Text ---------- */
+
+.am {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    width: min(500px, 90vw);
+
+    min-height: 400px;
+
+    height: auto;
+
+    margin: 0;
+}
+
+.am-title {
+    font-size: clamp(35px, 4vw, 45px);
+
+    font-weight: bold;
+
+    color: #27EDF0;
+}
+
+.am p {
+    font-size: clamp(17px, 1.5vw, 24px);
+
+    line-height: 1.5;
+
+    font-weight: lighter;
+
+    color: #27EDF0;
+}
+
+
+/* =========================================================
+   PROJECTS TITLE
+   ========================================================= */
+
+.projects {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 450px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: clamp(6rem, 10vw, 10rem) 5%;
+
+    overflow: hidden;
+}
+
+.projects-title {
+    position: relative;
+
+    z-index: 5;
+
+    font-size: clamp(60px, 9vw, 120px);
+
+    line-height: 1;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   PROJECT CIRCUITS
+   ========================================================= */
+
+.lines-circles2 {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.lines-circles2 > div {
+    position: absolute;
+
+    height: 2px;
+
+    background-color: #27EDF0;
+}
+
+
+/* ---------- Project Lines ---------- */
+
+.line20 {
+    top: 70px;
+    left: 0;
+    width: 264px;
+}
+
+.line21 {
+    top: 96px;
+    left: 254px;
+    width: 80px;
+    transform: rotate(40deg);
+}
+
+.line22 {
+    top: 122px;
+    left: 324px;
+    width: 150px;
+}
+
+.line23 {
+    top: 285px;
+    left: 0;
+    width: 285px;
+}
+
+.line24 {
+    top: 310px;
+    left: 275px;
+    width: 80px;
+    transform: rotate(40deg);
+}
+
+.line25 {
+    top: 336px;
+    left: 345px;
+    width: 75px;
+}
+
+.line26 {
+    top: 196px;
+    right: 0;
+    width: 250px;
+}
+
+.line27 {
+    top: 161px;
+    right: 236px;
+    width: 110px;
+    transform: rotate(40deg);
+}
+
+.line28 {
+    top: 126px;
+    right: 333px;
+    width: 140px;
+}
+
+.line29 {
+    top: 370px;
+    right: 0;
+    width: 300px;
+}
+
+.line30 {
+    top: 351px;
+    right: 293px;
+    width: 60px;
+    transform: rotate(40deg);
+}
+
+.line31 {
+    top: 332px;
+    right: 345px;
+    width: 99px;
+}
+
+
+/* ---------- Project Circles ---------- */
+
+.circle8,
+.circle9,
+.circle10,
+.circle11 {
+    width: 10px !important;
+    height: 10px !important;
+
+    border-radius: 50%;
+
+    background-color: #27EDF0 !important;
+}
+
+.circle8 {
+    top: 118px;
+    left: 471px;
+}
+
+.circle9 {
+    top: 332px;
+    left: 415px;
+}
+
+.circle10 {
+    top: 122px;
+    right: 470px;
+}
+
+.circle11 {
+    top: 328px;
+    right: 440px;
+}
+
+
+/* =========================================================
+   PROJECT 1
+   ========================================================= */
+
+.first-p,
+.second-p,
+.third-p {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    flex: 1;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: clamp(20px, 4vw, 60px);
+
+    padding: clamp(40px, 5vw, 75px);
+}
+
+
+/* ---------- Project 1 Description ---------- */
+
+.p1-desc {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    width: min(500px, 90vw);
+
+    min-width: 0;
+}
+
+.p1-up {
+    width: 100%;
+
+    text-align: right;
+}
+
+.con-p1-name {
+    width: fit-content;
+
+    max-width: 100%;
+
+    margin-left: auto;
+}
+
+.p1-name {
+    font-size: clamp(30px, 4vw, 50px);
+
+    line-height: 1.15;
+
+    font-weight: bold;
+
+    color: #27EDF0;
+}
+
+.p1-position {
+    display: block;
+
+    font-size: clamp(20px, 2vw, 25px);
+
+    font-weight: bold;
+
+    margin-top: 50px;
+
+    color: #27EDF0;
+}
+
+.space {
+    width: 100%;
+
+    height: 30px;
+}
+
+.p1-overview {
+    font-size: clamp(17px, 1.5vw, 20px);
+
+    line-height: 1.5;
+
+    text-align: right;
+
+    color: #27EDF0;
+}
+
+
+/* ---------- Project 1 Images ---------- */
+
+.imgs-p1 {
+    position: relative;
+
+    width: min(433px, 90vw);
+
+    height: 500px;
+
+    max-height: 60vw;
+
+    padding: 10px;
+
+    margin: 0;
+
+    flex-shrink: 1;
+}
+
+
+/* =========================================================
+   PROJECT 2
+   ========================================================= */
+
+.p2-desc {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    width: min(550px, 90vw);
+
+    min-width: 0;
+}
+
+.p2-up {
+    width: 100%;
+
+    text-align: left;
+}
+
+.con-p2-name {
+    width: fit-content;
+
+    max-width: 100%;
+}
+
+.p2-name {
+    font-size: clamp(30px, 4vw, 50px);
+
+    line-height: 1.15;
+
+    font-weight: bold;
+
+    color: #27EDF0;
+}
+
+.p2-position {
+    display: block;
+
+    font-size: clamp(20px, 2vw, 25px);
+
+    font-weight: bold;
+
+    margin-top: 50px;
+
+    color: #27EDF0;
+}
+
+.p2-overview {
+    font-size: clamp(17px, 1.5vw, 20px);
+
+    line-height: 1.5;
+
+    text-align: left;
+
+    color: #27EDF0;
+}
+
+
+/* ---------- Project 2 Images ---------- */
+
+.imgs-p2 {
+    position: relative;
+
+    width: min(625px, 90vw);
+
+    height: 500px;
+
+    max-height: 60vw;
+
+    padding: 10px;
+
+    margin: 0;
+
+    flex-shrink: 1;
+}
+
+
+/* =========================================================
+   PROJECT 3
+   ========================================================= */
+
+.p3-desc {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    width: min(570px, 90vw);
+
+    min-width: 0;
+}
+
+.p3-up {
+    width: 100%;
+
+    text-align: right;
+}
+
+.con-p3-name {
+    width: fit-content;
+
+    max-width: 100%;
+
+    margin-left: auto;
+}
+
+.p3-name {
+    font-size: clamp(30px, 4vw, 50px);
+
+    line-height: 1.15;
+
+    font-weight: bold;
+
+    color: #27EDF0;
+}
+
+.p3-position {
+    display: block;
+
+    font-size: clamp(20px, 2vw, 25px);
+
+    font-weight: bold;
+
+    margin-top: 50px;
+
+    color: #27EDF0;
+}
+
+.p3-overview {
+    font-size: clamp(17px, 1.5vw, 20px);
+
+    line-height: 1.5;
+
+    text-align: right;
+
+    color: #27EDF0;
+}
+
+
+/* ---------- Project 3 Images ---------- */
+
+.imgs-p3 {
+    position: relative;
+
+    width: min(625px, 90vw);
+
+    height: 500px;
+
+    max-height: 60vw;
+
+    padding: 10px;
+
+    margin: 0;
+
+    flex-shrink: 1;
+}
+
+
+/* =========================================================
+   HOBBIES / INTEREST
+   ========================================================= */
+
+.hobbies-interest {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: clamp(5rem, 8vw, 75px) 5%;
+}
+
+.hi-title {
+    font-size: clamp(35px, 4vw, 50px);
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.hi-maincon {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    padding: 30px;
+
+    height: fit-content;
+}
+
+.hi-con {
+    border: 5px solid #343434;
+
+    border-radius: 30px;
+
+    background-color: #101010;
+
+    width: 200px;
+
+    height: 250px;
+
+    margin: 0;
+
+    padding: 2rem 1rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hi-con:hover {
+    border-color: #27EDF0;
+
+    box-shadow:
+        0 0 10px rgba(39, 237, 240, 0.5),
+        0 0 25px rgba(39, 237, 240, 0.3);
+
+    transform: translateY(-5px);
+}
+
+
+/* ---------- Hobby Icons ---------- */
+
+.hi-1,
+.hi-2,
+.hi-3,
+.hi-4 {
+    height: 125px;
+
+    width: 125px;
+
+    aspect-ratio: 1 / 1;
+
+    flex-shrink: 0;
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hi-1 {
+    background-image: url(Elements/Basketball.png);
+    background-size: 85%;
+}
+
+.hi-2 {
+    background-image: url(Elements/Chess.png);
+    background-size: contain;
+}
+
+.hi-3 {
+    background-image: url(Elements/WebDesign.png);
+    background-size: contain;
+}
+
+.hi-4 {
+    background-image: url(Elements/Coding.png);
+    background-size: contain;
+}
+
+.hi-name {
+    color: #27EDF0;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-top: 1rem;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SOCIALS / CONTACTS
+   ========================================================= */
+
+.socials-contacts {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: clamp(5rem, 8vw, 75px) 5% 0;
+}
+
+.sc-title {
+    font-size: clamp(35px, 4vw, 50px);
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* ---------- Social Main Container ---------- */
+
+.sc-maincon {
+    position: relative;
+
+    width: min(720px, 90vw);
+
+    aspect-ratio: 16 / 9;
+
+    margin: 2rem;
+}
+
+
+/* ---------- Social Effects ---------- */
+
+.dim-effect {
+    transition:
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* ---------- Social Circle Base ---------- */
+
+.circle-info-1,
+.circle-info-2,
+.circle-info-3,
+.circle-info-4,
+.circle-info-5,
+.circle-info-6 {
+    position: absolute;
+
+    translate: -50% -50%;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    z-index: 1;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ---------- Gmail ---------- */
+
+.circle-info-1 {
+    top: 50%;
+    left: 50%;
+
+    width: min(180px, 25vw);
+
+    aspect-ratio: 1 / 1;
+
+    background-image: url(Elements/gmailpng.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* ---------- Phone ---------- */
+
+.circle-info-2 {
+    top: 65%;
+    left: 28%;
+
+    width: min(130px, 18vw);
+
+    aspect-ratio: 1 / 1;
+
+    background-image: url(Elements/PhoneIcon.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+}
+
+
+/* ---------- Location ---------- */
+
+.circle-info-3 {
+    top: 43%;
+    left: 72%;
+
+    width: min(110px, 16vw);
+
+    aspect-ratio: 1 / 1;
+
+    background-image: url(Elements/locationpng.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+
+
+/* ---------- Github ---------- */
+
+.circle-info-4 {
+    top: 73%;
+    left: 68%;
+
+    width: min(110px, 16vw);
+
+    aspect-ratio: 1 / 1;
+
+    background-image: url(Elements/GithubIcon.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 106%;
+}
+
+
+/* ---------- Instagram ---------- */
+
+.circle-info-5 {
+    top: 34%;
+    left: 31%;
+
+    width: min(100px, 14vw);
+
+    aspect-ratio: 1 / 1;
+
+    background-image: url(Elements/igdp.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* ---------- Facebook ---------- */
+
+.circle-info-6 {
+    top: 19.5%;
+    left: 62.5%;
+
+    width: min(100px, 14vw);
+
+    aspect-ratio: 1 / 1;
+
+    background-image: url(Elements/fbdp.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* =========================================================
+   SOCIAL INFORMATION
+   ========================================================= */
+
+.sc-info-1,
+.sc-info-2,
+.sc-info-3,
+.sc-info-4,
+.sc-info-5,
+.sc-info-6 {
+    display: flex;
+
+    width: max-content;
+
+    max-width: 45vw;
+
+    flex-direction: column;
+
+    position: absolute;
+
+    z-index: 10;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.sc-info-1 span,
+.sc-info-2 span,
+.sc-info-3 span,
+.sc-info-4 span,
+.sc-info-5 span,
+.sc-info-6 span {
+    font-size: clamp(14px, 1.5vw, 20px);
+
+    color: #27EDF0;
+
+    white-space: nowrap;
+}
+
+
+/* ---------- Individual Info Positions ---------- */
+
+.sc-info-1 {
+    top: 50%;
+    left: 83%;
+
+    align-items: flex-start;
+
+    transform: translate(-50%, -50%);
+}
+
+.sc-info-2 {
+    top: 65%;
+    left: 8%;
+
+    align-items: flex-end;
+
+    transform: translate(-50%, -50%);
+}
+
+.sc-info-3 {
+    top: 45%;
+    left: 96%;
+
+    align-items: flex-start;
+
+    transform: translate(-50%, -50%);
+}
+
+.sc-info-4 {
+    top: 74%;
+    left: 86%;
+
+    align-items: flex-start;
+
+    transform: translate(-50%, -50%);
+}
+
+.sc-info-5 {
+    top: 34%;
+    left: 15%;
+
+    align-items: flex-end;
+
+    transform: translate(-50%, -50%);
+}
+
+.sc-info-6 {
+    top: 19%;
+    left: 81%;
+
+    align-items: flex-start;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* ---------- Social Hover ---------- */
+
+.circle-info-1:hover ~ .sc-info-1,
+.circle-info-2:hover ~ .sc-info-2,
+.circle-info-3:hover ~ .sc-info-3,
+.circle-info-4:hover ~ .sc-info-4,
+.circle-info-5:hover ~ .sc-info-5,
+.circle-info-6:hover ~ .sc-info-6 {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.sc-maincon:hover .dim-effect {
+    opacity: 0.3;
+    transition: box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.sc-maincon .dim-effect:hover {
+    opacity: 1;
+
+    box-shadow:
+        0 0 5px #27EDF0,
+        0 0 15px #27EDF0,
+        0 0 15px #27EDF0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    grid-area: footer;
+
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    background-color: #010101;
+
+    color: white;
+
+    padding: 2rem 5%;
+
+    text-align: center;
+}
+
+.footer span {
+    max-width: 1000px;
+
+    font-size: clamp(12px, 1vw, 16px);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SEARCH SUGGESTIONS
+   ========================================================= */
+
+.search-suggestions {
+    position: absolute;
+
+    top: 80px;
+    right: 0;
+
+    width: min(260px, 90vw);
+
+    background: rgba(10, 10, 10, 0.95);
+
+    border: 1px solid rgba(0, 255, 255, 0.3);
+
+    border-radius: 6px;
+
+    display: none;
+
+    z-index: 2000;
+
+    max-height: 240px;
+
+    overflow-y: auto;
+}
+
+.search-suggestions div {
+    padding: 10px;
+
+    cursor: pointer;
+
+    color: #dff;
+
+    font-size: 14px;
+}
+
+.search-suggestions div:hover {
+    background: rgba(0, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL DESKTOP / LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .header {
+        gap: 10px;
+    }
+
+    .h-right {
+        gap: 4px;
+    }
+
+    .h-right ul {
+        gap: 0;
+    }
+
+    .h-right ul li {
+        margin: 0 0.35rem;
+        font-size: 14px;
+    }
+
+    .searchbar {
+        width: 170px;
+    }
+
+
+    /* Hero */
+
+    .intro-con {
+        gap: 25px;
+    }
+
+    .img-logo {
+        height: clamp(210px, 21vw, 260px);
+    }
+
+    .name {
+        font-size: clamp(48px, 5.5vw, 75px);
+    }
+
+    .position {
+        font-size: clamp(24px, 2.7vw, 35px);
+    }
+
+
+    /* About */
+
+    .aboutme {
+        gap: 30px;
+    }
+
+
+    /* Projects */
+
+    .projects-title {
+        font-size: clamp(60px, 8vw, 100px);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ---------- Header ---------- */
+
+    .header {
+        min-height: 85px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        padding: 10px 15px;
+    }
+
+    .h-left {
+        flex: 0 0 auto;
+    }
+
+    .h-right {
+        flex: 1 1 100%;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .h-right ul {
+        justify-content: center;
+    }
+
+    .searchbar {
+        width: 220px;
+    }
+
+
+    /* ---------- Hero ---------- */
+
+    .intro {
+        min-height: 650px;
+    }
+
+    .intro-con {
+        min-height: 650px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+
+        padding: 40px 20px;
+    }
+
+    .img-logo {
+        height: 220px;
+    }
+
+    .name-description {
+        width: min(700px, 90vw);
+    }
+
+    .name {
+        font-size: clamp(45px, 8vw, 70px);
+
+        white-space: normal;
+    }
+
+    .position {
+        font-size: clamp(24px, 4vw, 34px);
+    }
+
+    .name-description > .line {
+        margin: 12px auto;
+    }
+
+    .extra {
+        justify-content: center;
+
+        align-items: center;
+    }
+
+    .extra span {
+        text-align: center;
+    }
+
+
+    /* ---------- Circuit ---------- */
+
+    .lines-circles1 {
+        opacity: 0.45;
+
+        transform: scale(0.8);
+
+        transform-origin: center;
+    }
+
+
+    /* ---------- About ---------- */
+
+    .aboutme {
+        padding: 7rem 5%;
+
+        gap: 40px;
+    }
+
+    .am {
+        width: min(600px, 90vw);
+
+        min-height: auto;
+
+        gap: 30px;
+    }
+
+
+    /* ---------- Projects ---------- */
+
+    .projects {
+        min-height: 350px;
+    }
+
+    .projects-title {
+        font-size: clamp(55px, 10vw, 90px);
+    }
+
+    .first-p,
+    .second-p,
+    .third-p {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .p1-desc,
+    .p2-desc,
+    .p3-desc {
+        width: min(650px, 90vw);
+
+        align-items: center;
+    }
+
+    .p1-up,
+    .p2-up,
+    .p3-up {
+        text-align: center;
+    }
+
+    .con-p1-name,
+    .con-p2-name,
+    .con-p3-name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .p1-overview,
+    .p2-overview,
+    .p3-overview {
+        text-align: center;
+    }
+
+    .imgs-p1,
+    .imgs-p2,
+    .imgs-p3 {
+        width: min(500px, 90vw);
+    }
+
+
+    /* ---------- Hobbies ---------- */
+
+    .hi-maincon {
+        padding: 20px 10px;
+    }
+
+
+    /* ---------- Socials ---------- */
+
+    .sc-maincon {
+        width: min(720px, 90vw);
+    }
+
+    .sc-info-1 span,
+    .sc-info-2 span,
+    .sc-info-3 span,
+    .sc-info-4 span,
+    .sc-info-5 span,
+    .sc-info-6 span {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------- Header ---------- */
+
+    .header {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 10px;
+    }
+
+    .h-left {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .img-hlogo {
+        height: 55px;
+    }
+
+    .t-htitle {
+        font-size: 22px;
+    }
+
+    .h-right {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .searchbar {
+        width: min(300px, 90vw);
+
+        margin: 0;
+    }
+
+    .h-right ul {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 4px;
+    }
+
+    .h-right ul li {
+        margin: 0 4px;
+
+        font-size: 13px;
+    }
+
+
+    /* ---------- Hero ---------- */
+
+    .intro {
+        min-height: 700px;
+    }
+
+    .intro-con {
+        min-height: 700px;
+
+        padding: 30px 15px;
+
+        gap: 20px;
+    }
+
+    .img-logo {
+        height: 180px;
+    }
+
+    .name-description {
+        width: 100%;
+
+        max-width: 500px;
+    }
+
+    .name {
+        font-size: clamp(38px, 11vw, 60px);
+
+        white-space: normal;
+    }
+
+    .position {
+        font-size: clamp(20px, 6vw, 30px);
+    }
+
+    .extra {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+
+        margin-top: 25px;
+    }
+
+    .extra span {
+        font-size: 12px;
+    }
+
+    .main-btn {
+        width: 140px;
+    }
+
+
+    /* ---------- Hide circuits ---------- */
+
+    .lines-circles1 {
+        display: none;
+    }
+
+
+    /* ---------- About ---------- */
+
+    .aboutme {
+        flex-direction: column;
+
+        padding: 5rem 5%;
+
+        gap: 35px;
+    }
+
+    .img-me {
+        width: min(280px, 75vw);
+    }
+
+    .am {
+        width: 100%;
+
+        min-height: auto;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+    .am-title {
+        font-size: 38px;
+    }
+
+    .am p {
+        font-size: 17px;
+
+        line-height: 1.6;
+
+        text-align: left;
+    }
+
+
+    /* ---------- Projects ---------- */
+
+    .projects {
+        min-height: 280px;
+
+        padding: 5rem 5%;
+    }
+
+    .projects-title {
+        font-size: clamp(50px, 14vw, 75px);
+    }
+
+    .lines-circles2 {
+        opacity: 0.25;
+
+        transform: scale(0.65);
+
+        transform-origin: center;
+    }
+
+    .first-p,
+    .second-p,
+    .third-p {
+        padding: 50px 5%;
+
+        gap: 30px;
+    }
+
+    .p1-name,
+    .p2-name,
+    .p3-name {
+        font-size: clamp(28px, 9vw, 42px);
+    }
+
+    .p1-position,
+    .p2-position,
+    .p3-position {
+        font-size: 20px;
+
+        margin-top: 30px;
+    }
+
+    .p1-overview,
+    .p2-overview,
+    .p3-overview {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+    .imgs-p1,
+    .imgs-p2,
+    .imgs-p3 {
+        width: 100%;
+
+        max-width: 433px;
+
+        height: 400px;
+
+        max-height: none;
+    }
+
+
+    /* ---------- Hobbies ---------- */
+
+    .hobbies-interest {
+        padding: 5rem 5%;
+    }
+
+    .hi-title {
+        font-size: clamp(32px, 9vw, 45px);
+    }
+
+    .hi-maincon {
+        width: 100%;
+
+        padding: 20px 0;
+
+        gap: 15px;
+    }
+
+    .hi-con {
+        width: min(200px, 42vw);
+
+        height: 230px;
+
+        padding: 1.5rem 0.5rem;
+    }
+
+    .hi-1,
+    .hi-2,
+    .hi-3,
+    .hi-4 {
+        width: 100px;
+
+        height: 100px;
+    }
+
+    .hi-name {
+        font-size: 17px;
+    }
+
+
+    /* ---------- Socials ---------- */
+
+    .socials-contacts {
+        padding: 5rem 5% 0;
+    }
+
+    .sc-title {
+        font-size: clamp(30px, 8vw, 42px);
+    }
+
+    .sc-maincon {
+        width: 95vw;
+
+        margin: 2rem 0;
+    }
+
+    .sc-info-1 span,
+    .sc-info-2 span,
+    .sc-info-3 span,
+    .sc-info-4 span,
+    .sc-info-5 span,
+    .sc-info-6 span {
+        font-size: 11px;
+    }
+
+
+    /* ---------- Footer ---------- */
+
+    .footer {
+        padding: 1.5rem 5%;
+    }
+
+    .footer span {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .t-htitle {
+        font-size: 19px;
+    }
+
+    .img-hlogo {
+        height: 48px;
+    }
+
+    .h-right ul li {
+        font-size: 11px;
+
+        margin: 0 2px;
+    }
+
+
+    .intro {
+        min-height: 650px;
+    }
+
+    .intro-con {
+        min-height: 650px;
+    }
+
+    .img-logo {
+        height: 150px;
+    }
+
+    .name {
+        font-size: 36px;
+    }
+
+    .position {
+        font-size: 19px;
+    }
+
+    .extra span {
+        font-size: 10px;
+    }
+
+
+    .hi-con {
+        width: 140px;
+
+        height: 210px;
+    }
+
+    .hi-1,
+    .hi-2,
+    .hi-3,
+    .hi-4 {
+        width: 80px;
+
+        height: 80px;
+    }
+
+    .hi-name {
+        font-size: 15px;
+    }
+}
