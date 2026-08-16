@@ -732,7 +732,7 @@ body {
                 width: 600px;
                 height: 400px;
                 padding: 10px;
-                margin: 0 10px;
+                margin: 0 1rem 0 0;
                 background-color: #FFFFFF;
             }
         }
@@ -793,7 +793,7 @@ body {
                 width: 600px;
                 height: 400px;
                 padding: 10px;
-                margin: 0 10px;
+                margin: 0 0 0 1rem;
             }
         }
         .hobbies-interest {
