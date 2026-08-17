@@ -718,8 +718,9 @@ body {
                     height: 30px;
                 }
                 .p2-low {
+
                     .p2-overview {
-                        font-size: 15px;
+                        font-size: 14px;
                         font-weight: lighter;
                         line-height: 1.5;
                         text-align: left;
@@ -730,10 +731,9 @@ body {
             .imgs-p2 {
                 position: relative;
                 width: 600px;
-                height: 400px;
+                height: 380px;
                 padding: 10px;
                 margin: 0 2rem 0 0;
-                background-color: #FFFFFF;
             }
         }
         .third-p {
@@ -791,7 +791,7 @@ body {
             .imgs-p3 {
                 position: relative;
                 width: 600px;
-                height: 400px;
+                height: 380px;
                 padding: 10px;
                 margin: 0 0 0 2rem;
             }

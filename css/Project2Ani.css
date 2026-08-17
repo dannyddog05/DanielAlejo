@@ -1,0 +1,187 @@
+/* ================================
+       PROJECT 2 IMAGE CAROUSEL
+       ================================ */
+
+.imgs-p2 {
+    position: relative;
+
+    width: 600px;
+    height: 380px;
+
+    padding: 0;
+    margin: 0 2rem 0 0;
+
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    
+    
+
+    /* Keeps images above/below each other */
+    isolation: isolate;
+
+    /* --------------------------------
+           Individual carousel images
+           -------------------------------- */
+
+    img {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        
+
+        /* Fills the entire carousel */
+        object-fit: fill;
+
+        /* Prevents image distortion */
+        object-position: center;
+
+        /* Initial position */
+        transform: translateX(100%) scale(1.03);
+
+        opacity: 0;
+
+        /*
+             * 13 images x 4 seconds
+             * = 52 second complete cycle
+             */
+        animation-name: p2Carousel;
+        animation-duration: 52s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+
+        /*
+             * The delay is set individually below.
+             */
+    }
+
+    /* ================================
+           IMAGE TIMING
+           ================================ */
+
+    .p2-1st {
+    animation-delay: 0s;
+    }
+
+    .p2-2nd {
+        animation-delay: -48s;
+    }
+
+    .p2-3rd {
+        animation-delay: -44s;
+    }
+
+    .p2-4th {
+        animation-delay: -40s;
+    }
+
+    .p2-5th {
+        animation-delay: -36s;
+    }
+
+    .p2-6th {
+        animation-delay: -32s;
+    }
+
+    .p2-7th {
+        animation-delay: -28s;
+    }
+
+    .p2-8th {
+        animation-delay: -24s;
+    }
+
+    .p2-9th {
+        animation-delay: -20s;
+    }
+
+    .p2-10th {
+        animation-delay: -16s;
+    }
+
+    .p2-11th {
+        animation-delay: -12s;
+    }
+
+    .p2-12th {
+        animation-delay: -8s;
+    }
+
+    .p2-13th {
+        animation-delay: -4s;
+    }
+}
+
+
+
+/* ====================================
+   PROJECT 2 CAROUSEL ANIMATION
+   ==================================== */
+
+@keyframes p2Carousel {
+
+    /* --------------------------------
+       Start off-screen to the right
+       -------------------------------- */
+
+    0% {
+        transform: translateX(100%) scale(1.03);
+        opacity: 0;
+        filter: brightness(0.7);
+    }
+
+    /* --------------------------------
+       Slide into view
+       5% = 2.6 seconds in the
+       52-second animation
+
+       We want a quick entrance.
+       -------------------------------- */
+
+    3% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    /* --------------------------------
+       FULLY VISIBLE
+
+       This is the important part.
+
+       The image stays completely
+       visible for approximately
+       2 seconds.
+       -------------------------------- */
+
+    7% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        filter: brightness(1.08);
+    }
+
+    /* --------------------------------
+       Begin moving toward the left
+       -------------------------------- */
+
+    8% {
+        transform: translateX(-100%) scale(1.03);
+        opacity: 0;
+        filter: brightness(0.7);
+    }
+
+    /* --------------------------------
+       Stay hidden for the remainder
+       of this image's cycle.
+       -------------------------------- */
+
+    100% {
+        transform: translateX(-100%) scale(1.03);
+        opacity: 0;
+        filter: brightness(0.7);
+    }
+}
